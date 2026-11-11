@@ -19,7 +19,7 @@ $CFG->dboptions = array (
 );
 
 $CFG->wwwroot   = 'https://' . getenv('RAILWAY_PUBLIC_DOMAIN');
-$CFG->dataroot  = '/tmp/moodledata';
+$CFG->dataroot = '/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
