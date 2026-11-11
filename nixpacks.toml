@@ -1,0 +1,2 @@
+[phases.setup]
+phpExtensions = ["mysqli", "pdo_mysql", "openssl", "mbstring", "curl", "xml", "zip", "gd"]
