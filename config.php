@@ -18,9 +18,18 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8mb4_unicode_ci',
 );
 
-$CFG->wwwroot   = 'https://' . getenv('RAILWAY_PUBLIC_DOMAIN');
+// Hardcoded live URL to prevent domain detection errors
+$CFG->wwwroot   = 'https://moodle-ssh-lms-production.up.railway.app';
 $CFG->dataroot = '/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
+
+// --- Railway Reverse Proxy Fix ---
+$CFG->reverseproxy = true;
+
+if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+
 require_once(__DIR__ . '/lib/setup.php');
