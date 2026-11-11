@@ -48,6 +48,7 @@
         "ext-hash": "*",
         "ext-fileinfo": "*",
         "ext-sodium": "*",
+        "ext-mysqli": "*",
         "psr/container": "2.0.2",
         "psr/http-client": "1.0.3",
         "psr/http-factory": "1.1.0",
@@ -95,7 +96,6 @@
         "symfony/console": "^7.3"
     },
     "suggest": {
-        "ext-mysqli": "Needed when Moodle uses MySQL or MariaDB database.",
         "ext-pgsql": "Needed when Moodle uses PostgreSQL database.",
         "ext-sqlsrv": "Needed when Moodle uses MS SQL Server database.",
         "ext-tokenizer": "Enabling Tokenizer PHP extension is recommended, it improves Moodle Networking functionality.",
