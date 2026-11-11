@@ -30,4 +30,5 @@ if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PRO
     $_SERVER['HTTPS'] = 'on';
 }
 
-require_once(__DIR__ . '/lib/setup.php');
+// Sahi path jo /public se nikal kar /app/lib/setup.php par point karega
+require_once(dirname(__DIR__) . '/lib/setup.php');
