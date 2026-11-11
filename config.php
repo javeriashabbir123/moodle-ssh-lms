@@ -19,7 +19,8 @@ $CFG->dboptions = array (
 );
 
 $CFG->wwwroot   = 'https://moodle-ssh-lms-production.up.railway.app';
-$CFG->dataroot = '/moodledata';
+$CFG->dirroot   = '/app';
+$CFG->dataroot  = '/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
